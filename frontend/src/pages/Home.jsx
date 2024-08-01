@@ -3,6 +3,7 @@ import api from "../api";
 import Note from "../components/Note"
 import "../styles/Home.css"
 
+
 function Home() {
     const [notes, setNotes] = useState([]);
     const [content, setContent] = useState("");
