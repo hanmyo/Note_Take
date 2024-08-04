@@ -30,6 +30,21 @@
   transition: background-color 0.3s;
 }
 
+button {
+  margin: 20px;
+}
+.edit-button {
+  background-color: #007c42; 
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+.edit-button:hover {
+  background-color: #02a56f; 
+}
 
 .delete-button {
   background-color: #f44336; /* Red */

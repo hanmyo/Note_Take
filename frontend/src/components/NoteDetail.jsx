@@ -3,7 +3,7 @@ import "../styles/Note.css"
 import axios from 'axios';
 import { Link } from 'react-router-dom';
 
-function NoteDetail({ note, onDelete }) {
+function NoteDetail({ note, onDelete, onEdit }) {
     const formattedCreatedDate = new Date(note.created_at).toLocaleDateString("en-US")
     const formattedEditedDate = new Date(note.last_edited).toLocaleDateString("en-US")
     return (
@@ -15,6 +15,9 @@ function NoteDetail({ note, onDelete }) {
                 <h2 className="note-title">{note.title}</h2>
                 <p className="note-content">{note.content}</p>
                 
+                <button className="edit-button" onClick={() => onEdit(note.id)}>
+                    Edit
+                </button>
                 <button className="delete-button" onClick={() => onDelete(note.id)}>
                     Delete
                 </button>
